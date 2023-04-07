@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center" style="height: 100%; width: 100%;">
+    <div class="d-flex flex-column justify-content-center" style="text-align: left; height: 100%; width: 100%;">
+        <div class="d-flex justify-content-center">
+            <h5>Dependencies Presenter</h5>
+        </div>
+        <div class="spacer"></div>
+        <div *ngIf="choosingTypes" style="overflow-y: scroll;">
+            <div *ngFor="let item of dependencyTypes">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" (change)="onChange($event.target, item)"
+                        [checked]="checked(item)">
+                    <label style="font-size: 75%;" class="form-check-label">
+                        {{item}}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="choosingTypes" class="spacer"></div>
+        <div class="d-flex justify-content-center">
+            <h6 *ngIf="!choosingTypes">{{dependencyTitle}}</h6>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p *ngIf="!choosingTypes">{{dependencyDescription}}</p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <p *ngIf="!choosingTypes">{{dependenciesReason}}</p>
+        </div>
+        <div *ngIf="!choosingTypes" class="spacer"></div>
+        <div *ngIf="!choosingTypes" class="d-flex justify-content-center">
+            <button (click)="nextDependency()" class="btn my-btn" style="width: 50%;">Next</button>
+        </div>
+        <div *ngIf="!choosingTypes" class="spacer"></div>
+        <div *ngIf="!choosingTypes" class="d-flex justify-content-center">
+            <button (click)="toggle()" class="btn my-btn" style="width: 50%;">Choose Types</button>
+        </div>
+        <div *ngIf="!choosingTypes" class="spacer"></div>
+        <div *ngIf="choosingTypes" class="d-flex justify-content-center">
+            <button (click)="toggle()" class="btn my-btn" style="width: 50%;">Close Types</button>
+        </div>
+        <div *ngIf="choosingTypes" class="spacer"></div>
+        <div *ngIf="!choosingTypes" class="d-flex justify-content-center">
+            <button (click)="cancelPresenting()" class="btn my-btn" style="width: 50%;">Cancel</button>
+        </div>
+        <div *ngIf="!choosingTypes" class="spacer"></div>
+    </div>
+</div>

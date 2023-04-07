@@ -1,0 +1,99 @@
+.my-btn {
+    background-color: #2C3C5B;
+    color: #FFFFFF;
+    border: medium solid #2C3C5B;
+}
+
+.my-btn:hover {
+    color: #0AC5A8;
+    border: medium solid #0AC5A8;
+}
+
+.icons-row {
+    width: 100%;
+    height: 9%;
+    justify-content: space-around;
+}
+
+.spacer {
+    width: 100%;
+    height: 3%;
+}
+
+.icon-button {
+    height: 100%;
+    border: medium solid #5E738E;
+    border-radius: 4px !important;
+}
+
+.icon-button:hover {
+    height: 100%;
+    border: medium solid #0AC5A8;
+}
+
+.icon-button-clicked {
+    height: 100%;
+    border: medium solid #0AC5A8;
+}
+
+#canvas {
+    height: 100%;
+    width: 100%;
+    background-color: #FFF;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.modal-btn {
+    background-color: #2C3C5B;
+    color: #FFFFFF;
+    border: medium solid #2C3C5B !important;
+    margin: 1.5%;
+}
+
+.modal-btn-static {
+    background-color: #EBEBEB;
+    color: #FFFFFF;
+    border: medium solid #2C3C5B !important;
+    margin: 1.5%;
+}
+
+.modal-btn:hover {
+    color: #0AC5A8;
+    border: medium solid #0AC5A8 !important;
+}
+
+.modal-title {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: #EBEBEB;
+    color: #2C3C5B;
+    border-bottom: medium solid #2C3C5B;
+}
+
+.loader {
+    border: 16px solid #2C3C5B; 
+    border-top: 16px solid #0AC5A8;
+    border-radius: 50%;
+    width: 20vh;
+    height: 20vh;
+    animation: spin 2s linear infinite;
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.ui-blocker {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}

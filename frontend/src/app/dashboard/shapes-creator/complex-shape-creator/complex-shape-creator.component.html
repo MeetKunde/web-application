@@ -1,0 +1,59 @@
+<div *ngIf="displayInstructions" class="d-flex justify-content-center" style="height: 100%; width: 100%;">
+    <div class="d-flex flex-column justify-content-center" style="text-align: center; height: 100%; width: 100%;">
+        <h5>{{title}}</h5>
+        <div class="spacer"></div>
+        <h6>{{instructions}}</h6>
+        <div class="spacer"></div>
+        <div class="d-flex justify-content-center">
+            <button (click)="cancelChoosing()" class="btn my-btn" style="width: 50%;">Cancel</button>
+        </div>
+        <div class="spacer"></div>
+    </div>
+</div>
+
+<div *ngIf="displayPolygonMovement" class="d-flex justify-content-center" style="height: 100%; width: 100%;">
+    <div class="d-flex flex-column justify-content-center" style="text-align: center; height: 100%; width: 100%;">
+        <h5>Shape Configuring</h5>
+        <div *ngIf="displayMovingPointAlert">
+            <div class="spacer"></div>
+            <h6 style="margin-top: 20px; margin-bottom: 20px;">{{movingPointAlert}}</h6>
+        </div>
+        <div class="spacer"></div>
+        <div *ngIf="checkAvailableTransformation(3)" class="d-flex flex-row icons-row">
+            <input *ngIf="checkAvailableTransformation(1)" type="image" class="icon-button" src="/static/imgs/LeftArrowIcon.svg" (click)="arrowLeft();" alt="Move Left">
+            <input *ngIf="checkAvailableTransformation(2)" type="image" class="icon-button" src="/static/imgs/DownArrowIcon.svg" (click)="arrowDown();" alt="Move Down">
+            <input *ngIf="checkAvailableTransformation(2)" type="image" class="icon-button" src="/static/imgs/UpArrowIcon.svg" (click)="arrowUp();" alt="Move Up">
+            <input *ngIf="checkAvailableTransformation(1)" type="image" class="icon-button" src="/static/imgs/RightArrowIcon.svg" (click)="arrowRight();" alt="Move Right">
+        </div>
+        <div *ngIf="checkAvailableTransformation(3)" class="spacer"></div>
+        <div *ngIf="checkAvailableTransformation(60)" class="d-flex flex-row icons-row">
+            <input *ngIf="checkAvailableTransformation(16)" type="image" class="icon-button" src="/static/imgs/RescaleXYPlusIcon.svg" (click)="rescaleXYPlus();" alt="Scale Proportionally">
+            <input *ngIf="checkAvailableTransformation(4)" type="image" class="icon-button" src="/static/imgs/RescaleXPlusIcon.svg" (click)="rescaleXPlus();" alt="Scale Along X Axis">
+            <input *ngIf="checkAvailableTransformation(8)" type="image" class="icon-button" src="/static/imgs/RescaleYPlusIcon.svg" (click)="rescaleYPlus();" alt="Scale Along Y Axis">
+            <input *ngIf="checkAvailableTransformation(32)" type="image" class="icon-button" src="/static/imgs/RotateClockwiseIcon.svg" (click)="rotateClockwise();" alt="Rotate Clockwise">
+        </div>
+        <div *ngIf="checkAvailableTransformation(60)" class="spacer"></div>
+        <div *ngIf="checkAvailableTransformation(60)" class="d-flex flex-row icons-row">
+            <input *ngIf="checkAvailableTransformation(16)" type="image" class="icon-button" src="/static/imgs/RescaleXYMinusIcon.svg" (click)="rescaleXYMinus();" alt="Scale Proportionally">
+            <input *ngIf="checkAvailableTransformation(4)" type="image" class="icon-button" src="/static/imgs/RescaleXMinusIcon.svg" (click)="rescaleXMinus();" alt="Scale Along X Axis">
+            <input *ngIf="checkAvailableTransformation(8)" type="image" class="icon-button" src="/static/imgs/RescaleYMinusIcon.svg" (click)="rescaleYMinus();" alt="Scale Along Y Axis">
+            <input *ngIf="checkAvailableTransformation(32)" type="image" class="icon-button" src="/static/imgs/RotateCounterClockwiseIcon.svg" (click)="rotateCounterClockwise();" alt="Rotate Counter Clockwise">
+        </div>
+        <div *ngIf="checkAvailableTransformation(60)" class="spacer"></div>
+        <div *ngIf="checkAvailableTransformation(1472)" class="d-flex flex-row icons-row">
+            <input *ngIf="checkAvailableTransformation(64)" type="image" class="icon-button" src="/static/imgs/ChangeSideIcon.svg" (click)="changeSide();" alt="Change Side">
+            <input *ngIf="checkAvailableTransformation(128)" type="image" class="icon-button" src="/static/imgs/MirrorXIcon.svg" (click)="mirrorImageX();" alt="Mirror Image Along X">
+            <input *ngIf="checkAvailableTransformation(256)" type="image" class="icon-button" src="/static/imgs/MirrorYIcon.svg" (click)="mirrorImageY();" alt="Mirror Image Along Y">
+            <input *ngIf="checkAvailableTransformation(1024)" type="image" class="icon-button" src="/static/imgs/ReverseIcon.svg" (click)="reverse();" alt="Reverse">
+        </div>
+        <div *ngIf="checkAvailableTransformation(1472)" class="spacer"></div>
+        <div class="d-flex justify-content-center">
+            <button (click)="confirmPolygonCreating()" class="btn my-btn" style="width: 50%;">Confirm</button>
+        </div>
+        <div class="spacer"></div>
+        <div class="d-flex justify-content-center">
+            <button (click)="cancelConfiguring()" class="btn my-btn" style="width: 50%;">Cancel</button>
+        </div>
+        <div class="spacer"></div>
+    </div>
+</div>

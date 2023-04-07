@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.my-btn {
+  background-color: #2C3C5B;
+  color: #FFFFFF;
+  border: medium solid #2C3C5B;
+}
+
+.my-btn:hover {
+  color: #0AC5A8;
+  border: medium solid #0AC5A8;
+}

@@ -1,0 +1,66 @@
+<div *ngIf="!displayComplexShapeCreator" style="height: 100%; width: 100%;">
+    <div class="d-flex flex-column" style="height: 100%; width: 100%;">
+        <div class="d-flex flex-row icons-row">
+            <app-point></app-point>
+            <app-segment></app-segment>
+            <app-line></app-line>
+            <app-semiline></app-semiline>
+            <app-circle></app-circle>
+        </div>
+        <div class="spacer"></div>
+        <div class="d-flex flex-row icons-row">
+            <app-perpendicularity></app-perpendicularity>
+            <app-parallelism></app-parallelism>
+            <app-mid-perpendicular></app-mid-perpendicular>
+            <app-bisector></app-bisector>
+        </div>
+        <div class="spacer"></div>
+        <div class="d-flex flex-row icons-row">
+            <app-set-length></app-set-length>
+            <app-set-angle-value></app-set-angle-value>
+            <app-divide-segment></app-divide-segment>
+            <app-divide-angle></app-divide-angle>
+            <app-tangent-circle></app-tangent-circle>
+        </div>
+        <div class="spacer"></div>
+        <div class="d-flex flex-row icons-row">
+            <app-equal-segments></app-equal-segments>
+            <app-equal-angles></app-equal-angles>
+            <app-inscribed-circle></app-inscribed-circle>
+            <app-circumscribed-circle></app-circumscribed-circle>
+            <app-escribed-circle></app-escribed-circle>
+        </div>
+        <div class="spacer"></div>
+        <div class="d-flex flex-row icons-row">
+            <app-triangle></app-triangle>
+            <app-square></app-square>
+            <app-rectangle></app-rectangle>
+            <app-polygon></app-polygon>
+        </div>
+        <div class="spacer"></div>
+        <div class="d-flex flex-row icons-row">
+            <app-parallelogram></app-parallelogram>
+            <app-kite></app-kite>
+            <app-rhombus></app-rhombus>
+            <app-trapezoid></app-trapezoid>
+        </div>
+        <div class="spacer"></div>
+        <div class="d-flex flex-row icons-row">
+            <app-median></app-median>
+            <app-altitude></app-altitude>
+            <app-mid-segment></app-mid-segment>
+        </div>
+        <div class="spacer"></div>
+        <div class="d-flex flex-row icons-row">
+            <app-process-data></app-process-data>
+            <app-save-scheme></app-save-scheme>
+            <app-load-scheme></app-load-scheme>
+            <app-clear-canvas></app-clear-canvas>
+        </div>
+        <div class="spacer"></div>
+    </div>
+</div>
+
+<div *ngIf="displayComplexShapeCreator" style="height: 100%; width: 100%;">
+    <app-complex-shape-creator></app-complex-shape-creator>
+</div>

@@ -1,0 +1,8 @@
+<div style="height: 100%; width: 100%;">
+  <div *ngIf="!_userService.accessToken">
+    <app-login></app-login>
+  </div>
+  <div *ngIf="_userService.accessToken" style="height: 100%; width: 100%;">
+    <app-dashboard></app-dashboard>
+  </div>
+</div>
